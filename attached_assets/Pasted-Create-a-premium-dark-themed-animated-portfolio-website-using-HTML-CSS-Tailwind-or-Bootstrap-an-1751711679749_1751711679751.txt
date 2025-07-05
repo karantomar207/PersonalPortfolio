@@ -1,0 +1,121 @@
+Create a premium, dark-themed animated portfolio website using HTML, CSS (Tailwind or Bootstrap), and JavaScript for Karan Singh Tomar, a Software Developer.
+
+The website should include the following key features:
+
+🔹 BASIC STRUCTURE:
+🔘 Homepage (Hero Section):
+Animated introduction text:
+
+Main: "Hi, I'm Karan Singh Tomar — Software Developer"
+
+Subtext: "I build AI agents, scalable web apps, and system-level services that solve real-world problems."
+
+Smooth scroll-based text + element animations
+
+🔹 About Me Section:
+3–4 lines covering:
+
+Who I am
+
+3 years of experience
+
+Specializations: Agentic AI, APIs, Web Services, ML
+
+Personal touch: "I love solving real-world problems using tech."
+
+Make paragraph editable via contenteditable="true" or HTML comments
+
+Dark clean layout with section headers and smooth fade-in
+
+🔹 Services Section:
+Card/grid layout showcasing the services:
+
+🤖 Agentic AI Systems
+
+🌐 Web Services & APIs
+
+💻 Full-stack Web Applications
+
+Each service card includes:
+
+Short description
+
+Editable pricing info in HTML
+
+Scroll-triggered animations
+
+🔹 Portfolio Gallery:
+Two sections: "Web Applications" and "Agentic AI Projects"
+
+Grid view of images/projects
+
+Hover effect and lightbox/modal preview
+
+Responsive on all devices
+
+🔹 Experience Timeline:
+Work experience in vertical/horizontal animated timeline format
+
+🏢 Careers360 — Software Developer (3 years)
+
+🔹 Built scalable internal tools and public APIs
+
+🔹 Led development of AI-powered features for students
+
+🔹 Articles / Blog Section:
+List of latest 3–5 articles using:
+
+Dev.to, Medium, or Hashnode embed
+
+Or manual HTML entries
+
+Preview card layout with image, title, snippet, and link
+
+🔹 Contact Section:
+Contact form with:
+
+Full Name
+
+Email
+
+Message
+
+Real-time JavaScript form validation
+
+Submit using EmailJS
+
+Buttons for:
+
+Download Resume (PDF)
+
+Visit LinkedIn and GitHub
+
+🔹 Footer:
+Clean and minimal dark footer
+
+Text: © 2025 Karan Singh Tomar
+
+Social icons (LinkedIn, GitHub, Dev.to)
+
+📦 Tech Stack:
+HTML, CSS (Tailwind or Bootstrap), JavaScript
+
+EmailJS for contact form
+
+AOS.js or GSAP for scroll animations
+
+Responsive & Mobile-friendly design
+
+Optional: Light/Dark mode toggle (with JS)
+
+🔽 Final Output:
+
+Deliver a fully working HTML + CSS + JS site
+
+Single page preferred (SPA-like scroll)
+
+Separate style and script files
+
+Include comments for customization
+
+Easily editable/resumable template
