@@ -1,8 +1,10 @@
 // Portfolio Website JavaScript
 
 // Initialize EmailJS
-emailjs.init("OP9wGlDrFL0WDotzw");
-
+(function () {
+    const emailjsPublicKey = 'OP9wGlDrFL0WDotzw';
+    emailjs.init(emailjsPublicKey);
+})();
 // DOM Elements
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
