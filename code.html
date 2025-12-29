@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cakey.co.in | Premium Handcrafted Cakes & Pastries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcfb;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .brand-red { color: #dc2626; }
+        .bg-brand-red { background-color: #dc2626; }
+        .border-brand-red { border-color: #dc2626; }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        .category-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-stone-100 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <!-- Placeholder for Logo -->
+                <div class="w-10 h-10 bg-white border border-stone-200 rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="images/598878685_17948992332070311_7884407697272269400_n.jpg" alt="Chef Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xl font-bold tracking-tight text-stone-900">cakey<span class="brand-red">.co.in</span></span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#menu" class="hover:brand-red transition-colors">Menu</a>
+                <a href="#about" class="hover:brand-red transition-colors">About</a>
+                <a href="#contact" class="hover:brand-red transition-colors">Contact</a>
+                <a href="#order" class="bg-brand-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition-all shadow-md shadow-red-200">Order Now</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Dropdown (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-100 px-4 py-4 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+            <a href="#menu" class="text-lg font-medium">Menu</a>
+            <a href="#about" class="text-lg font-medium">About</a>
+            <a href="#contact" class="text-lg font-medium">Contact</a>
+            <a href="#order" class="bg-brand-red text-white text-center py-3 rounded-xl font-bold">Order Online</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4 bg-stone-50">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <span class="inline-block bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Handcrafted with Love</span>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight text-stone-900 mb-6">
+                    Crafting Sweet <br> <span class="brand-red italic">Memories</span>, One Slice at a Time.
+                </h1>
+                <p class="text-stone-600 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
+                    Premium cakes and artisanal pastries baked fresh every morning with the finest ingredients.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#order" class="bg-brand-red text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-red-200 hover:scale-105 transition-transform">Order Online</a>
+                    <a href="#menu" class="bg-white text-stone-800 border border-stone-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-stone-50 transition-colors">Explore Menu</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="Featured Cake" class="rounded-3xl shadow-2xl relative z-10">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-white rounded-full flex items-center justify-center p-4 shadow-xl z-20 border border-stone-50">
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold brand-red leading-none">100%</span>
+                        <span class="text-[10px] text-stone-500 font-bold uppercase tracking-tighter">Fresh Daily</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Overview -->
+    <section id="about" class="py-16 px-4 text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-stone-900 mb-4">The Art of Pure Baking</h2>
+        <p class="text-stone-600 leading-relaxed text-lg italic">
+            "We believe in the magic of fresh ingredients and handcrafted quality. Every creation at Cakey is a celebration of taste and tradition."
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold">Our Menu</h2>
+                <div class="flex gap-2 overflow-x-auto category-scroll pb-2">
+                    <button class="bg-brand-red text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">All Items</button>
+                    <button class="bg-white border border-stone-200 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:border-brand-red">Cakes</button>
+                    <button class="bg-white border border-stone-200 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:border-brand-red">Pastries</button>
+                    <button class="bg-white border border-stone-200 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:border-brand-red">Beverages</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 group transition-all hover:shadow-lg">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Signature</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Red Velvet Cloud</h3>
+                            <span class="brand-red font-bold font-sans">₹899</span>
+                        </div>
+                        <p class="text-stone-500 text-sm mb-4">Deep cocoa sponge layered with silken cream cheese frosting.</p>
+                        <button class="w-full border border-stone-200 py-2 rounded-xl text-sm font-bold hover:bg-stone-50 transition-colors">Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 group transition-all hover:shadow-lg">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Belgian Truffle</h3>
+                            <span class="brand-red font-bold font-sans">₹1,200</span>
+                        </div>
+                        <p class="text-stone-500 text-sm mb-4">Dense chocolate sponge with imported 70% dark Belgian ganache.</p>
+                        <button class="w-full border border-stone-200 py-2 rounded-xl text-sm font-bold hover:bg-stone-50 transition-colors">Add to Order</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 group transition-all hover:shadow-lg">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Butterscotch Crunch</h3>
+                            <span class="brand-red font-bold font-sans">₹750</span>
+                        </div>
+                        <p class="text-stone-500 text-sm mb-4">Homemade praline and caramel glaze on a light vanilla base.</p>
+                        <button class="w-full border border-stone-200 py-2 rounded-xl text-sm font-bold hover:bg-stone-50 transition-colors">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Items (Must Try) -->
+    <section class="py-16 bg-stone-900 text-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Chef's <span class="brand-red">Must-Try</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                        <span class="bg-brand-red text-white text-[10px] w-fit font-bold px-2 py-1 rounded mb-2">Bestseller</span>
+                        <h4 class="text-xl font-bold">Chocolate Lava Cup</h4>
+                        <p class="text-stone-300 text-xs">Melts in your mouth instantly.</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                        <span class="bg-amber-500 text-white text-[10px] w-fit font-bold px-2 py-1 rounded mb-2">Limited</span>
+                        <h4 class="text-xl font-bold">Berry Blast Pastry</h4>
+                        <p class="text-stone-300 text-xs">A seasonal mix of 5 exotic berries.</p>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover opacity-60 group-hover:opacity-80 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                        <span class="bg-blue-500 text-white text-[10px] w-fit font-bold px-2 py-1 rounded mb-2">New</span>
+                        <h4 class="text-xl font-bold">Classic Cold Brew</h4>
+                        <p class="text-stone-300 text-xs">Steeped for 18 hours for perfection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section (High Conversion) -->
+    <section id="order" class="py-20 px-4">
+        <div class="max-w-xl mx-auto text-center bg-white border border-stone-200 rounded-[3rem] p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl font-bold mb-4">Hungry? We Deliver!</h2>
+            <p class="text-stone-500 mb-10">Get your favorite treats delivered to your doorstep in minutes.</p>
+            
+            <div class="flex flex-col gap-4">
+                <a href="#" class="flex items-center justify-center gap-3 bg-white border border-stone-200 py-4 rounded-2xl hover:bg-stone-50 transition-all font-bold group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Zomato_Logo.svg" alt="Zomato" class="h-6">
+                    <span class="group-hover:translate-x-1 transition-transform">Order on Zomato</span>
+                </a>
+                <a href="#" class="flex items-center justify-center gap-3 bg-white border border-stone-200 py-4 rounded-2xl hover:bg-stone-50 transition-all font-bold group">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Swiggy_logo.svg/1200px-Swiggy_logo.svg.png" alt="Swiggy" class="h-6">
+                    <span class="group-hover:translate-x-1 transition-transform">Order on Swiggy</span>
+                </a>
+                <a href="https://wa.me/910000000000" class="flex items-center justify-center gap-3 bg-green-500 text-white py-4 rounded-2xl hover:bg-green-600 transition-all font-bold shadow-lg shadow-green-100 group">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.131c1.53.913 3.375 1.395 5.262 1.396 5.613 0 10.181-4.568 10.184-10.181.002-2.72-1.058-5.277-2.983-7.203-1.926-1.926-4.482-2.986-7.201-2.986-5.619 0-10.187 4.567-10.19 10.181-.001 1.867.504 3.692 1.46 5.281l-.956 3.49 3.573-.938zm11.391-7.713c-.314-.157-1.86-.918-2.148-1.023-.289-.104-.499-.157-.709.157-.21.314-.813 1.023-.996 1.232-.183.21-.367.235-.681.078-.314-.157-1.325-.488-2.524-1.558-.932-.831-1.562-1.857-1.745-2.171-.183-.314-.02-.484.137-.641.142-.142.314-.367.471-.55.157-.183.209-.314.314-.524.105-.21.052-.393-.026-.55-.079-.157-.709-1.71-.971-2.339-.255-.612-.513-.529-.709-.539-.183-.01-.393-.012-.603-.012-.21 0-.551.079-.84.393-.289.314-1.102 1.074-1.102 2.618 0 1.545 1.128 3.037 1.285 3.247.157.21 2.219 3.39 5.375 4.754.751.325 1.336.518 1.792.662.753.239 1.44.205 1.982.124.603-.09 1.86-.759 2.122-1.492.262-.733.262-1.361.183-1.492-.08-.131-.289-.21-.603-.367z"/></svg>
+                    <span>Direct WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="py-16 px-4 bg-stone-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Loved by Locals</h2>
+            <div class="flex gap-6 overflow-x-auto category-scroll px-4">
+                <!-- Review 1 -->
+                <div class="min-w-[300px] bg-white p-8 rounded-3xl shadow-sm border border-stone-100">
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-stone-600 mb-6 italic text-sm">"The Belgian Truffle cake was the highlight of our anniversary. Incredible quality!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-200 rounded-full"></div>
+                        <div>
+                            <span class="block font-bold text-sm">Priya Sharma</span>
+                            <span class="text-[10px] text-stone-400 font-bold uppercase">Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="min-w-[300px] bg-white p-8 rounded-3xl shadow-sm border border-stone-100">
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-stone-600 mb-6 italic text-sm">"Best pastries in town. The Red Velvet is literally like eating a cloud. Highly recommend!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-200 rounded-full"></div>
+                        <div>
+                            <span class="block font-bold text-sm">Rahul Varma</span>
+                            <span class="text-[10px] text-stone-400 font-bold uppercase">Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="min-w-[300px] bg-white p-8 rounded-3xl shadow-sm border border-stone-100">
+                    <div class="flex gap-1 mb-4 text-amber-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-stone-600 mb-6 italic text-sm">"Super fast delivery and the packaging was premium. Everything arrived perfectly."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-200 rounded-full"></div>
+                        <div>
+                            <span class="block font-bold text-sm">Ananya G.</span>
+                            <span class="text-[10px] text-stone-400 font-bold uppercase">Loyal Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-bold mb-6 italic">Come Visit <span class="brand-red">Us.</span></h2>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-stone-400 uppercase text-xs tracking-widest mb-2">Address</h4>
+                        <p class="text-lg">Shop 12, Bakery Lane, Opp. High Park,<br>Mumbai, Maharashtra 400001</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-400 uppercase text-xs tracking-widest mb-2">Hours</h4>
+                        <p class="text-lg">Monday – Sunday: 09:00 AM – 11:00 PM</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-400 uppercase text-xs tracking-widest mb-2">Email</h4>
+                        <p class="text-lg">hello@cakey.co.in</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 h-64 bg-stone-200 rounded-3xl overflow-hidden grayscale">
+                    <!-- Map Placeholder -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.2123348123!2d72.825833!3d18.9225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU1JzIxLjAiTiA3MsKwNDknMzMuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="bg-stone-50 p-8 md:p-12 rounded-[2.5rem] border border-stone-200">
+                <h3 class="text-2xl font-bold mb-6">Have an Enquiry?</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-2">Full Name</label>
+                        <input type="text" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 outline-none focus:border-brand-red transition-colors" placeholder="e.g. John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-2">Phone / Email</label>
+                        <input type="text" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 outline-none focus:border-brand-red transition-colors" placeholder="+91 00000 00000">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-2">Message</label>
+                        <textarea rows="4" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 outline-none focus:border-brand-red transition-colors" placeholder="Custom cake request or bulk orders?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-stone-900 text-white py-4 rounded-xl font-bold hover:bg-stone-800 transition-colors shadow-lg shadow-stone-200">Send Message</button>
+                    <p class="text-center text-stone-400 text-xs mt-4">Or <a href="#" class="brand-red font-bold">WhatsApp us</a> for instant reply</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-100 pt-16 pb-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+            <div class="text-center md:text-left">
+                <span class="text-3xl font-bold tracking-tight text-stone-900">cakey<span class="brand-red">.co.in</span></span>
+                <p class="text-stone-400 mt-2 text-sm">Premium Handmade Joy.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="text-stone-400 hover:text-brand-red transition-colors">Instagram</a>
+                <a href="#" class="text-stone-400 hover:text-brand-red transition-colors">Facebook</a>
+                <a href="#" class="text-stone-400 hover:text-brand-red transition-colors">Twitter</a>
+            </div>
+        </div>
+        <div class="text-center border-t border-stone-50 pt-8">
+            <p class="text-stone-400 text-[10px] uppercase font-bold tracking-[0.2em]">© 2024 Cakey.co.in | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking links
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
