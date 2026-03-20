@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Archeology for VS Code - Official Website</title>
+    <meta name="description" content="Code Archeology for VS Code helps developers understand function history, ownership, and evolution faster.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Code Archeology for VS Code">
+    <meta property="og:description" content="Understand why a function exists, who changed it, and how it evolved.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="min-h-[72vh] flex items-center py-20 bg-dark-secondary border-b border-dark-tertiary">
+        <div class="container mx-auto px-6">
+            <a href="index.html" class="btn-secondary px-5 py-2 rounded-lg inline-flex items-center mb-8">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+
+            <div class="max-w-4xl">
+                <p class="text-accent-primary font-semibold mb-3">Official Extension Website</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight">Code Archeology for VS Code</h1>
+                <p class="text-text-secondary text-lg md:text-2xl mb-8">Get all details of any function in seconds: history, ownership, evolution, and related code paths.</p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://marketplace.visualstudio.com/" class="btn-primary px-8 py-3 rounded-lg font-semibold">Install from VS Code Marketplace</a>
+                    <a href="#demo" class="btn-secondary px-8 py-3 rounded-lg font-semibold">View Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Screenshots & Demo</h2>
+                <p class="text-text-secondary">How the extension works inside your real codebase</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up">
+                    <div class="h-44 rounded-lg bg-gradient-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-4xl text-accent-primary"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Function Timeline</h3>
+                    <p class="text-text-secondary text-sm">Track major edits and understand how a function changed over time.</p>
+                </div>
+
+                <div class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-44 rounded-lg bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 flex items-center justify-center mb-4">
+                        <i class="fas fa-user-check text-4xl text-accent-primary"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Ownership Insights</h3>
+                    <p class="text-text-secondary text-sm">See who authored and touched a function most, with context from commit activity.</p>
+                </div>
+
+                <div class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-44 rounded-lg bg-gradient-to-br from-green-500/30 to-blue-500/30 flex items-center justify-center mb-4">
+                        <i class="fas fa-sitemap text-4xl text-accent-primary"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Code Relationships</h3>
+                    <p class="text-text-secondary text-sm">Follow callers, dependencies, and adjacent symbols to debug faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-dark-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Features & Use Cases</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-dark-tertiary rounded-xl p-7" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-3">For New Team Members</h3>
+                    <p class="text-text-secondary">Understand unfamiliar modules quickly by reading function context and historical evolution in one place.</p>
+                </div>
+
+                <div class="bg-dark-tertiary rounded-xl p-7" data-aos="fade-up" data-aos-delay="80">
+                    <h3 class="text-xl font-bold mb-3">For Debugging</h3>
+                    <p class="text-text-secondary">Identify risky edits, root-cause regressions, and reduce investigation time during incidents.</p>
+                </div>
+
+                <div class="bg-dark-tertiary rounded-xl p-7" data-aos="fade-up" data-aos-delay="120">
+                    <h3 class="text-xl font-bold mb-3">For Code Reviews</h3>
+                    <p class="text-text-secondary">Review changes with historical context so decisions are based on actual evolution patterns.</p>
+                </div>
+
+                <div class="bg-dark-tertiary rounded-xl p-7" data-aos="fade-up" data-aos-delay="160">
+                    <h3 class="text-xl font-bold mb-3">For Legacy Code</h3>
+                    <p class="text-text-secondary">Make sense of old functions by combining commit history, ownership signals, and code relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-dark-secondary rounded-xl p-8 border border-dark-tertiary" data-aos="fade-up">
+                    <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+                    <p class="text-text-secondary mb-5">Read how user input, repository metadata, and diagnostics are handled.</p>
+                    <a href="privacy-policy.html" class="btn-secondary px-6 py-2 rounded-lg">Read Privacy Policy</a>
+                </div>
+
+                <div class="bg-dark-secondary rounded-xl p-8 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-2xl font-bold mb-4">Support & Contact</h2>
+                    <p class="text-text-secondary mb-3">Need help, reporting a bug, or discussing enterprise usage?</p>
+                    <p class="text-text-secondary mb-5">Email: <a class="text-accent-primary hover:underline" href="mailto:karantomar207@gmail.com">karantomar207@gmail.com</a></p>
+                    <a href="index.html#contact" class="btn-primary px-6 py-2 rounded-lg">Contact Karan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-dark-secondary border-t border-dark-tertiary">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-text-muted text-sm">© 2026 Code Archeology for VS Code. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 80 });
+    </script>
+</body>
+</html>
