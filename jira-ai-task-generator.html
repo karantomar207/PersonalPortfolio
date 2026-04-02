@@ -20,20 +20,50 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-primary': '#0a0a0a',
+                        'dark-secondary': '#1a1a1a',
+                        'dark-tertiary': '#2a2a2a',
+                        'accent-primary': '#3b82f6',
+                        'accent-secondary': '#8b5cf6',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a1a1aa',
+                        'text-muted': '#71717a',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-dark-primary text-text-primary font-inter">
-    <header class="py-5 border-b border-dark-tertiary bg-dark-primary/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="text-accent-primary font-bold text-xl">Karan Singh Tomar</a>
-            <a href="index.html#extensions" class="btn-secondary px-4 py-2 rounded-lg inline-flex items-center">
-                <i class="fas fa-arrow-left mr-2"></i>Back to Extensions
-            </a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-primary/90 backdrop-blur-md border-b border-dark-tertiary">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold text-accent-primary">Karan Singh Tomar</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#extensions" class="nav-link hover:text-accent-primary transition-colors">Extensions</a>
+                    <a href="#screenshots" class="nav-link hover:text-accent-primary transition-colors">Screenshots</a>
+                    <a href="#demo-video" class="nav-link hover:text-accent-primary transition-colors">Demo</a>
+                    <a href="privacy-policy.html" class="nav-link hover:text-accent-primary transition-colors">Privacy</a>
+                </div>
+                <a href="index.html#extensions" class="btn-secondary px-4 py-2 rounded-lg inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Extensions
+                </a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="py-20 bg-dark-secondary border-b border-dark-tertiary">
-            <div class="container mx-auto px-6">
+    <main class="pt-20">
+        <section class="min-h-[85vh] flex items-center py-20 bg-dark-secondary border-b border-dark-tertiary relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-10 items-center">
                     <div data-aos="fade-right">
                         <p class="text-accent-primary font-semibold mb-3">Chrome Extension / AI Productivity Tool</p>
@@ -44,10 +74,11 @@
                             <a href="https://chromewebstore.google.com/detail/jira-ai-task-generator/aijfofeipkmkpeicflidkiigliknhlen" class="btn-primary px-8 py-3 rounded-lg font-semibold" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
                             <a href="#demo-video" class="btn-secondary px-8 py-3 rounded-lg font-semibold">View Demo</a>
                         </div>
+                        <p class="text-text-muted text-sm mt-4">Privacy details are available on the <a href="privacy-policy.html" class="text-accent-primary hover:underline">Privacy Policy page</a>.</p>
                     </div>
                     <div data-aos="fade-left">
-                        <div class="bg-dark-tertiary border border-dark-tertiary rounded-2xl p-4">
-                            <img src="/images/jira-ai-3.png" alt="JIRA AI Task Generator extension screenshot" class="w-full h-auto rounded-xl" loading="eager">
+                        <div class="bg-dark-tertiary/90 border border-dark-tertiary rounded-2xl p-4 shadow-2xl hover-glow">
+                            <img src="/images/Gemini_break_issue.jpg" alt="JIRA AI Task Generator extension screenshot" class="w-full h-auto rounded-xl" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -58,12 +89,13 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-14" data-aos="fade-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Screenshots</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto mb-6"></div>
                     <p class="text-text-secondary">See how the extension turns messy input into execution-ready JIRA tickets.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <article class="bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary" data-aos="fade-up">
-                        <img src="/images/jira-ai-1.png" alt="Input prompt box" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="/images/Gemini_login.jpg" alt="Input prompt box" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-5">
                             <h3 class="font-bold mb-2">1. Login to Your Account</h3>
                             <p class="text-text-secondary text-sm">Securely sign in to your account before generating tasks and syncing your workflow.</p>
@@ -71,7 +103,7 @@
                     </article>
 
                     <article class="bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary" data-aos="fade-up" data-aos-delay="80">
-                        <img src="/images/jira-ai-2.png" alt="Generated JIRA ticket" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="/images/Gemini_create_issue.jpg" alt="Generated JIRA ticket" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-5">
                             <h3 class="font-bold mb-2">2. Generated JIRA Ticket</h3>
                             <p class="text-text-secondary text-sm">Get title, detailed description, and implementation-ready structure.</p>
@@ -79,7 +111,7 @@
                     </article>
 
                     <article class="bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary" data-aos="fade-up" data-aos-delay="120">
-                        <img src="/images/jira-ai-3.png" alt="One click copy export" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="/images/Gemini_prd_stories.jpg" alt="One click copy export" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-5">
                             <h3 class="font-bold mb-2">3. One-click Copy / Export</h3>
                             <p class="text-text-secondary text-sm">Copy ready-to-use content and move directly into your workflow.</p>
@@ -87,7 +119,7 @@
                     </article>
 
                     <article class="bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary" data-aos="fade-up" data-aos-delay="160">
-                        <img src="/images/jira-ai-4.png" alt="Chrome extension popup" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="/images/Gemini_break_issue.jpg" alt="Chrome extension popup" class="w-full h-48 object-cover" loading="lazy">
                         <div class="p-5">
                             <h3 class="font-bold mb-2">4. Extension Popup UI</h3>
                             <p class="text-text-secondary text-sm">Fast access from browser with a clean UI designed for speed.</p>
@@ -95,7 +127,7 @@
                     </article>
 
                     <article class="bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary md:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                        <img src="/images/jira-ai-5.png" alt="Integration preview" class="w-full h-56 object-cover" loading="lazy">
+                        <img src="/images/Gemini_create_issue.jpg" alt="Integration preview" class="w-full h-56 object-cover" loading="lazy">
                         <div class="p-5">
                             <h3 class="font-bold mb-2">5. Integration Preview</h3>
                             <p class="text-text-secondary text-sm">Preview how generated tasks map into sprint planning and team execution flow.</p>
@@ -134,6 +166,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-14" data-aos="fade-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Core Features</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto"></div>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <article class="service-card p-6 rounded-xl" data-aos="fade-up">
@@ -168,6 +201,7 @@
             <div class="container mx-auto px-6 max-w-5xl">
                 <div class="text-center mb-14" data-aos="fade-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto"></div>
                 </div>
                 <ol class="grid md:grid-cols-4 gap-5">
                     <li class="bg-dark-tertiary rounded-xl p-6" data-aos="fade-up">
@@ -198,6 +232,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Use Cases</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto"></div>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     <article class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up">
@@ -223,6 +258,7 @@
         <section id="demo-video" class="py-20 bg-dark-secondary">
             <div class="container mx-auto px-6 max-w-5xl text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">Demo</h2>
+                <div class="w-24 h-1 bg-accent-primary mx-auto mb-8" data-aos="fade-up"></div>
                 <div class="bg-dark-tertiary border border-dark-tertiary rounded-2xl p-6" data-aos="zoom-in">
                     <div class="aspect-video rounded-xl bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
                         <i class="fas fa-play-circle text-6xl text-accent-primary"></i>
@@ -243,6 +279,7 @@
         <section class="py-20 bg-dark-secondary">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center" data-aos="fade-up">FAQ</h2>
+                <div class="w-24 h-1 bg-accent-primary mx-auto mb-10" data-aos="fade-up"></div>
                 <div class="space-y-4">
                     <details class="bg-dark-tertiary rounded-xl p-5" data-aos="fade-up">
                         <summary class="font-semibold cursor-pointer">Is it free?</summary>
@@ -271,6 +308,7 @@
         <section class="py-20">
             <div class="container mx-auto px-6 max-w-6xl">
                 <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center" data-aos="fade-up">What Users Are Saying</h2>
+                <div class="w-24 h-1 bg-accent-primary mx-auto mb-10" data-aos="fade-up"></div>
                 <div class="grid md:grid-cols-3 gap-6">
                     <article class="bg-dark-secondary border border-dark-tertiary rounded-xl p-6" data-aos="fade-up">
                         <p class="text-text-secondary mb-4">“This saved me hours writing JIRA tickets 🔥”</p>
@@ -294,7 +332,7 @@
                 <div class="grid md:grid-cols-3 gap-4 text-center">
                     <a href="https://chromewebstore.google.com/detail/jira-ai-task-generator/aijfofeipkmkpeicflidkiigliknhlen" class="btn-secondary px-5 py-3 rounded-lg" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
                     <a href="https://github.com/karantomar207" class="btn-secondary px-5 py-3 rounded-lg" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="privacy-policy.html" class="btn-secondary px-5 py-3 rounded-lg">Documentation</a>
+                    <a href="privacy-policy.html" class="btn-secondary px-5 py-3 rounded-lg">Privacy Policy</a>
                 </div>
             </div>
         </section>
@@ -302,7 +340,7 @@
 
     <footer class="py-10 bg-dark-primary border-t border-dark-tertiary">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-text-muted text-sm">© 2026 JIRA AI Task Generator. All rights reserved.</p>
+            <p class="text-text-muted text-sm">© 2026 JIRA AI Task Generator. All rights reserved. <a href="privacy-policy.html" class="text-accent-primary hover:underline">Privacy Policy</a></p>
         </div>
     </footer>
 
