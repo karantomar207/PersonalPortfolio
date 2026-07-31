@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FillOnce - Job Application Autofill Chrome Extension</title>
+    <meta name="description" content="FillOnce helps job seekers fill repetitive application fields from a reusable local profile, attach resumes, and review every result before submitting.">
+    <meta name="author" content="Karan Singh Tomar">
+    <link rel="canonical" href="https://karansinghtomar.dev/fillonce.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karansinghtomar.dev/fillonce.html">
+    <meta property="og:title" content="FillOnce - Job Application Autofill">
+    <meta property="og:description" content="Reuse your local profile and documents across job applications while staying in control of every submission.">
+    <meta property="og:image" content="https://karansinghtomar.dev/images/form_filler/marquee-1400x560.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FillOnce - Job Application Autofill">
+    <meta name="twitter:description" content="A privacy-first Chrome extension for repetitive job application fields.">
+    <meta name="twitter:image" content="https://karansinghtomar.dev/images/form_filler/marquee-1400x560.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body { overflow-x: hidden; }
+        img { max-width: 100%; height: auto; }
+        @media (max-width: 639px), (prefers-reduced-motion: reduce) {
+            [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'dark-primary': '#0a0a0a',
+                        'dark-secondary': '#1a1a1a',
+                        'dark-tertiary': '#2a2a2a',
+                        'accent-primary': '#28a476',
+                        'accent-secondary': '#57d39e',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a1a1aa',
+                        'text-muted': '#71717a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-primary text-text-primary font-inter">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-primary/90 backdrop-blur-md border-b border-dark-tertiary">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-5">
+                <a href="index.html" class="text-xl font-bold text-accent-primary">Karan Singh Tomar</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="nav-link hover:text-accent-primary transition-colors">Features</a>
+                    <a href="#how-it-works" class="nav-link hover:text-accent-primary transition-colors">How It Works</a>
+                    <a href="#privacy" class="nav-link hover:text-accent-primary transition-colors">Privacy</a>
+                    <a href="form-filler-privacy-policy.html" class="nav-link hover:text-accent-primary transition-colors">Policy</a>
+                </div>
+                <a href="index.html#extensions" aria-label="Back to Extensions" class="btn-secondary px-3 sm:px-4 py-2 rounded-lg inline-flex items-center whitespace-nowrap">
+                    <i class="fas fa-arrow-left sm:mr-2"></i><span class="hidden sm:inline">Back to Extensions</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <section class="min-h-[86vh] flex items-center py-20 bg-dark-secondary border-b border-dark-tertiary relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center min-w-0">
+                    <div class="min-w-0" data-aos="fade-right">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="images/form_filler/icon-128.png" alt="FillOnce icon" class="w-16 h-16 rounded-2xl shadow-xl">
+                            <div>
+                                <p class="text-accent-primary font-semibold tracking-[0.18em] uppercase text-sm">Chrome Extension</p>
+                                <p class="text-text-muted text-sm">Manifest V3 · Local-first</p>
+                            </div>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-5">Fill once.<br><span class="text-accent-primary">Apply confidently.</span></h1>
+                        <p class="text-text-secondary text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">FillOnce helps job seekers reuse profile details and documents across repetitive application forms—without surrendering control of the final application.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#features" class="btn-primary px-8 py-3 rounded-lg font-semibold text-center">Explore Features</a>
+                            <a href="form-filler-privacy-policy.html" class="btn-secondary px-8 py-3 rounded-lg font-semibold text-center">Read Privacy Policy</a>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-7 text-sm text-text-secondary">
+                            <span class="px-4 py-2 rounded-full border border-dark-tertiary bg-dark-primary/60"><i class="fas fa-laptop mr-2 text-accent-primary"></i>Stored on your device</span>
+                            <span class="px-4 py-2 rounded-full border border-dark-tertiary bg-dark-primary/60"><i class="fas fa-hand-pointer mr-2 text-accent-primary"></i>No auto-submit</span>
+                        </div>
+                    </div>
+                    <div class="min-w-0" data-aos="fade-left">
+                        <div class="bg-dark-primary/80 border border-dark-tertiary rounded-3xl p-3 shadow-2xl hover-glow">
+                            <img src="images/form_filler/marquee-1400x560.png" alt="FillOnce job application autofill preview" class="w-full rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <p class="text-accent-primary font-semibold tracking-[0.18em] uppercase mb-3">Built for job applications</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-5">Less repetitive typing. More review.</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto mb-6"></div>
+                    <p class="text-text-secondary max-w-3xl mx-auto">FillOnce focuses on employment forms—not banking, medical, payment, authentication, or general-purpose form automation.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up">
+                        <i class="fas fa-id-card text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Reusable Profile</h3>
+                        <p class="text-text-secondary">Save identity, contact, education, employment, skills, preferences, and work-authorization details once.</p>
+                    </article>
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up" data-aos-delay="60">
+                        <i class="fas fa-file-arrow-up text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Real Document Attachment</h3>
+                        <p class="text-text-secondary">Attach a locally stored resume or cover letter to compatible file inputs with filename and size verification.</p>
+                    </article>
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up" data-aos-delay="120">
+                        <i class="fas fa-layer-group text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Modern Form Support</h3>
+                        <p class="text-text-secondary">Handles standard inputs, selects, radios, checkboxes, custom controls, embedded frames, and open shadow roots.</p>
+                    </article>
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up" data-aos-delay="180">
+                        <i class="fas fa-brain text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Optional Answer Memory</h3>
+                        <p class="text-text-secondary">Reuse approved answers when enabled. Answer Memory and experimental automatic remembering are both off by default.</p>
+                    </article>
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up" data-aos-delay="240">
+                        <i class="fas fa-eye text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Review-first Results</h3>
+                        <p class="text-text-secondary">See matched, unknown, preserved, document, and manual-review fields before deciding what to submit.</p>
+                    </article>
+                    <article class="service-card p-7 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-shield-halved text-3xl text-accent-primary mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Safety Boundaries</h3>
+                        <p class="text-text-secondary">Passwords, OTPs, payments, government IDs, CAPTCHAs, signatures, certifications, and consent remain untouched.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 bg-dark-secondary border-y border-dark-tertiary">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 items-center min-w-0">
+                    <div class="min-w-0" data-aos="fade-right">
+                        <p class="text-accent-primary font-semibold tracking-[0.18em] uppercase mb-3">The workflow</p>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-8">Four steps, with you in control.</h2>
+                        <ol class="space-y-5">
+                            <li class="flex gap-4"><span class="w-10 h-10 shrink-0 grid place-items-center rounded-full bg-accent-primary/20 text-accent-primary font-bold">1</span><div><h3 class="font-bold mb-1">Build your profile</h3><p class="text-text-secondary">Add only the details and documents you want FillOnce to use.</p></div></li>
+                            <li class="flex gap-4"><span class="w-10 h-10 shrink-0 grid place-items-center rounded-full bg-accent-primary/20 text-accent-primary font-bold">2</span><div><h3 class="font-bold mb-1">Open a job application</h3><p class="text-text-secondary">FillOnce detects supported fields across the application page and embedded frames.</p></div></li>
+                            <li class="flex gap-4"><span class="w-10 h-10 shrink-0 grid place-items-center rounded-full bg-accent-primary/20 text-accent-primary font-bold">3</span><div><h3 class="font-bold mb-1">Review the scan</h3><p class="text-text-secondary">Check profile matches, document readiness, unknown fields, and manual actions.</p></div></li>
+                            <li class="flex gap-4"><span class="w-10 h-10 shrink-0 grid place-items-center rounded-full bg-accent-primary/20 text-accent-primary font-bold">4</span><div><h3 class="font-bold mb-1">Fill, verify, and submit yourself</h3><p class="text-text-secondary">FillOnce applies compatible values. You review the final form and decide whether to submit.</p></div></li>
+                        </ol>
+                    </div>
+                    <div class="min-w-0" data-aos="fade-left">
+                        <div class="bg-dark-primary border border-dark-tertiary rounded-3xl p-3 shadow-2xl">
+                            <img src="images/form_filler/screenshot-popup-1280x800.png" alt="FillOnce extension popup reviewing a job application form" class="w-full rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="py-20">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 min-w-0">
+                    <article class="bg-dark-secondary border border-dark-tertiary rounded-2xl p-8" data-aos="fade-right">
+                        <p class="text-accent-primary font-semibold mb-3">Local-first privacy</p>
+                        <h2 class="text-3xl font-bold mb-5">Your application data stays with your browser.</h2>
+                        <ul class="space-y-3 text-text-secondary">
+                            <li><i class="fas fa-check text-accent-primary mr-3"></i>Profile and settings use local Chrome extension storage.</li>
+                            <li><i class="fas fa-check text-accent-primary mr-3"></i>Document files use extension-owned IndexedDB.</li>
+                            <li><i class="fas fa-check text-accent-primary mr-3"></i>No account, analytics, advertising, or FillOnce server is required.</li>
+                            <li><i class="fas fa-check text-accent-primary mr-3"></i>Answer Memory is opt-in and can be disabled at any time.</li>
+                        </ul>
+                    </article>
+                    <article class="bg-dark-secondary border border-dark-tertiary rounded-2xl p-8" data-aos="fade-left">
+                        <p class="text-accent-primary font-semibold mb-3">Compatibility</p>
+                        <h2 class="text-3xl font-bold mb-5">Designed for job applications—not every form.</h2>
+                        <p class="text-text-secondary mb-5">FillOnce supports conventional HTML forms and many modern applicant-tracking-system patterns. Websites can change, and some custom controls will still require manual entry.</p>
+                        <p class="text-text-secondary mb-7">Always inspect the completed form, verify attachments, and confirm sensitive answers before submission.</p>
+                        <a href="form-filler-privacy-policy.html" class="inline-flex items-center text-accent-primary font-semibold hover:underline">Read the complete Privacy Policy <i class="fas fa-arrow-right ml-2"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark-secondary border-t border-dark-tertiary">
+            <div class="container mx-auto px-6 max-w-4xl text-center" data-aos="zoom-in">
+                <img src="images/form_filler/icon-128.png" alt="" class="w-20 h-20 rounded-2xl mx-auto mb-6">
+                <h2 class="text-4xl font-bold mb-4">FillOnce is preparing for launch.</h2>
+                <p class="text-text-secondary text-lg mb-8">The extension is being tested across job-application workflows before its public Chrome Web Store release.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold">Contact the Developer</a>
+                    <a href="form-filler-privacy-policy.html" class="btn-secondary px-8 py-3 rounded-lg font-semibold">Privacy Policy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-dark-primary border-t border-dark-tertiary">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-text-muted text-sm">© 2026 FillOnce. A Chrome extension by Karan Singh Tomar. <a href="form-filler-privacy-policy.html" class="text-accent-primary hover:underline">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 850, once: true, offset: 70 });</script>
+</body>
+</html>

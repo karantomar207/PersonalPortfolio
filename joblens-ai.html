@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobLens AI - Smart Resume to Job Match Analyzer</title>
+    <meta name="description" content="JobLens AI is a Chrome extension that compares resumes with live job postings, highlights skill gaps, and gives AI-powered application insights before you apply.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JobLens AI - Smart Resume to Job Match Analyzer">
+    <meta property="og:description" content="Compare your resume with job descriptions, discover missing skills, and get AI-assisted application insights.">
+    <meta property="og:url" content="https://karansinghtomar.dev/joblens-ai.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JobLens AI - Smart Resume to Job Match Analyzer">
+    <meta name="twitter:description" content="AI-powered Chrome extension for smarter job applications.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-primary': '#0a0a0a',
+                        'dark-secondary': '#1a1a1a',
+                        'dark-tertiary': '#2a2a2a',
+                        'accent-primary': '#8b5cf6',
+                        'accent-secondary': '#ec4899',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a1a1aa',
+                        'text-muted': '#71717a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-primary text-text-primary font-inter">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-primary/90 backdrop-blur-md border-b border-dark-tertiary">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold text-accent-primary">Karan Singh Tomar</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#extensions" class="nav-link hover:text-accent-primary transition-colors">Extensions</a>
+                    <a href="#features" class="nav-link hover:text-accent-primary transition-colors">Features</a>
+                    <a href="#how-it-works" class="nav-link hover:text-accent-primary transition-colors">How It Works</a>
+                    <a href="privacy-policy.html" class="nav-link hover:text-accent-primary transition-colors">Privacy</a>
+                </div>
+                <a href="index.html#extensions" class="btn-secondary px-4 py-2 rounded-lg inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Extensions
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <section class="min-h-[85vh] flex items-center py-20 bg-dark-secondary border-b border-dark-tertiary relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div data-aos="fade-right">
+                        <p class="text-accent-primary font-semibold mb-3">Chrome Extension / AI Career Tool</p>
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-5">JobLens AI</h1>
+                        <p class="text-2xl md:text-3xl font-semibold text-accent-secondary mb-5">Understand your fit before you apply</p>
+                        <p class="text-text-secondary text-lg mb-8">JobLens AI compares your resume with live job descriptions, surfaces missing skills, identifies hidden requirements, and helps you make smarter application decisions in seconds.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#features" class="btn-primary px-8 py-3 rounded-lg font-semibold">Explore Features</a>
+                            <a href="#contact-cta" class="btn-secondary px-8 py-3 rounded-lg font-semibold">Request Early Access</a>
+                        </div>
+                        <p class="text-text-muted text-sm mt-4">Privacy details are available on the <a href="privacy-policy.html" class="text-accent-primary hover:underline">Privacy Policy page</a>.</p>
+                    </div>
+                    <div data-aos="fade-left">
+                        <div class="bg-dark-tertiary/90 border border-dark-tertiary rounded-2xl p-8 shadow-2xl hover-glow">
+                            <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 p-8">
+                                <div class="grid grid-cols-2 gap-4 mb-5">
+                                    <div class="bg-dark-primary/70 rounded-xl p-4 border border-dark-tertiary">
+                                        <p class="text-text-muted text-xs mb-2">Match Score</p>
+                                        <p class="text-3xl font-bold text-accent-secondary">84%</p>
+                                    </div>
+                                    <div class="bg-dark-primary/70 rounded-xl p-4 border border-dark-tertiary">
+                                        <p class="text-text-muted text-xs mb-2">Missing Skills</p>
+                                        <p class="text-3xl font-bold">5</p>
+                                    </div>
+                                </div>
+                                <div class="bg-dark-primary/70 rounded-xl p-5 border border-dark-tertiary mb-4">
+                                    <p class="text-text-muted text-xs mb-3">Top Insights</p>
+                                    <ul class="space-y-2 text-sm text-text-secondary">
+                                        <li>Strong match on backend and API experience</li>
+                                        <li>Gaps detected in system design and AWS depth</li>
+                                        <li>Resume keywords can be improved for ATS screening</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-accent-primary/20 text-accent-primary text-sm">Resume Match</span>
+                                    <span class="px-3 py-1 rounded-full bg-accent-secondary/20 text-accent-secondary text-sm">Skill Gaps</span>
+                                    <span class="px-3 py-1 rounded-full bg-white/10 text-white text-sm">ATS Insights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Core Features</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto mb-6"></div>
+                    <p class="text-text-secondary">Built to help job seekers evaluate opportunities quickly and apply with more confidence.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up">
+                        <h3 class="text-xl font-bold mb-2">Resume to Job Matching</h3>
+                        <p class="text-text-secondary">Compares saved resume content with live job descriptions and estimates role fit.</p>
+                    </article>
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="60">
+                        <h3 class="text-xl font-bold mb-2">Skill Gap Detection</h3>
+                        <p class="text-text-secondary">Highlights missing skills and helps prioritize what to learn or showcase next.</p>
+                    </article>
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="120">
+                        <h3 class="text-xl font-bold mb-2">ATS Keyword Insights</h3>
+                        <p class="text-text-secondary">Finds important keywords and experience signals that are missing from the resume.</p>
+                    </article>
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="180">
+                        <h3 class="text-xl font-bold mb-2">Job Page Detection</h3>
+                        <p class="text-text-secondary">Works directly on supported job sites so users can analyze roles in context.</p>
+                    </article>
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="240">
+                        <h3 class="text-xl font-bold mb-2">Actionable Suggestions</h3>
+                        <p class="text-text-secondary">Turns analysis into practical next steps for resume updates and interview prep.</p>
+                    </article>
+                    <article class="service-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-bold mb-2">Fast Chrome Workflow</h3>
+                        <p class="text-text-secondary">Designed as a lightweight extension with local resume storage and in-page results.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark-secondary">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <article class="bg-dark-tertiary rounded-xl p-8" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold mb-4">The Problem</h2>
+                        <ul class="text-text-secondary space-y-3">
+                            <li>Job seekers often apply without knowing how well their profile matches the role.</li>
+                            <li>Important missing skills and ATS gaps are easy to overlook in long job descriptions.</li>
+                            <li>Manual comparison between resume and job posting takes time and creates friction.</li>
+                        </ul>
+                    </article>
+                    <article class="bg-dark-tertiary rounded-xl p-8" data-aos="fade-left">
+                        <h2 class="text-3xl font-bold mb-4">The Solution</h2>
+                        <p class="text-text-secondary mb-4">JobLens AI gives users a focused pre-application decision layer right inside the browser.</p>
+                        <ul class="text-text-secondary space-y-2">
+                            <li>Analyze the job posting instantly</li>
+                            <li>Compare against the resume</li>
+                            <li>Surface strengths and missing areas</li>
+                            <li>Recommend how to improve the application</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
+                    <div class="w-24 h-1 bg-accent-primary mx-auto"></div>
+                </div>
+                <ol class="grid md:grid-cols-4 gap-5">
+                    <li class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up">
+                        <p class="text-accent-primary font-bold mb-2">Step 1</p>
+                        <h3 class="font-bold mb-2">Save your resume</h3>
+                        <p class="text-text-secondary text-sm">Upload or paste resume content once for repeated use.</p>
+                    </li>
+                    <li class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="80">
+                        <p class="text-accent-primary font-bold mb-2">Step 2</p>
+                        <h3 class="font-bold mb-2">Open a job page</h3>
+                        <p class="text-text-secondary text-sm">Navigate to a supported job listing and let the extension detect the role.</p>
+                    </li>
+                    <li class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="140">
+                        <p class="text-accent-primary font-bold mb-2">Step 3</p>
+                        <h3 class="font-bold mb-2">Run analysis</h3>
+                        <p class="text-text-secondary text-sm">Job and resume data are processed to generate match insights and recommendations.</p>
+                    </li>
+                    <li class="bg-dark-secondary rounded-xl p-6 border border-dark-tertiary" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-accent-primary font-bold mb-2">Step 4</p>
+                        <h3 class="font-bold mb-2">Improve before applying</h3>
+                        <p class="text-text-secondary text-sm">Use the output to refine your resume and prepare more strategically.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="py-20 bg-dark-secondary">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+                    <article class="bg-dark-tertiary rounded-xl p-8" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold mb-4">Privacy Approach</h2>
+                        <ul class="text-text-secondary space-y-3">
+                            <li>Resume content can be stored locally in the browser for convenience.</li>
+                            <li>When analysis is requested, resume text and selected job data may be sent to backend services.</li>
+                            <li>The product is designed to be transparent about what is processed and why.</li>
+                        </ul>
+                    </article>
+                    <article class="bg-dark-tertiary rounded-xl p-8" data-aos="fade-left">
+                        <h2 class="text-3xl font-bold mb-4">Built With</h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 rounded-full bg-accent-primary/20 text-accent-primary">Chrome MV3</span>
+                            <span class="px-4 py-2 rounded-full bg-accent-primary/20 text-accent-primary">JavaScript</span>
+                            <span class="px-4 py-2 rounded-full bg-accent-primary/20 text-accent-primary">FastAPI</span>
+                            <span class="px-4 py-2 rounded-full bg-accent-primary/20 text-accent-primary">Resume Parsing</span>
+                            <span class="px-4 py-2 rounded-full bg-accent-primary/20 text-accent-primary">LLM Analysis</span>
+                        </div>
+                        <p class="text-text-secondary mt-5">The product originated as the Job Analyzer project and grew into a polished extension experience focused on practical job-application decision support.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-cta" class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-dark-secondary border border-dark-tertiary rounded-3xl p-10 text-center" data-aos="zoom-in">
+                    <h2 class="text-4xl font-bold mb-4">Interested in JobLens AI?</h2>
+                    <p class="text-text-secondary text-lg mb-8">If you want to collaborate, discuss the product, or get early access details, I’d love to connect.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold">Contact Me</a>
+                        <a href="privacy-policy.html" class="btn-secondary px-8 py-3 rounded-lg font-semibold">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-dark-secondary border-t border-dark-tertiary">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-text-muted text-sm">© 2026 JobLens AI. Product page by Karan Singh Tomar. <a href="privacy-policy.html" class="text-accent-primary hover:underline">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true, offset: 80 });
+    </script>
+</body>
+</html>
